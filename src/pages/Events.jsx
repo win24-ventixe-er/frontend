@@ -5,7 +5,7 @@ export const Events = () => {
     const [events, setEvents] = React.useState([])
 
     const getEvents = async () => {
-        const response = await fetch('')//sätt rätt URL här
+        const response = await fetch('https://localhost:7289/api/events')//sätt rätt URL här
         if (response.ok) {
             const data = await response.json()
             setEvents(data)
